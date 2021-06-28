@@ -1,0 +1,36 @@
+.alertMessage {
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.alertMessage svg {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    margin-right: 15px;
+}
+
+.alertMessage p {
+    overflow: hidden;
+    font-weight: 500;
+    text-overflow: ellipsis;
+}
+
+.alertMessageError{
+    color: #9c4356;
+    background: #F6EAEA;
+    border: 1px solid #CA6E81;
+}
+
+.alertMessageSuccess{
+    color: green;
+    background: #EAF6EA;
+    border: 1px solid #6ECA81;
+}

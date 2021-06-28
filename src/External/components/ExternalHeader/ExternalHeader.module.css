@@ -1,0 +1,107 @@
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    color: white;
+    justify-content: space-between;
+}
+
+.nav > * {
+    width: 33.333%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.leftSection {
+    padding-left: 32px;
+}
+
+.midSection {
+    justify-content: center;
+}
+
+.midSection > * {
+    margin: 0 15px;
+}
+
+/** BEG STYLES FOR DYNAMIC UNDERLINING */
+.midSection a,
+.mobileMenu li a{
+    position: relative;
+}
+
+.midSection a:global(.active)::after,
+.midSection a::after,
+.mobileMenu li a:global(.active)::after,
+.mobileMenu li a::after
+{
+    content: ' ';
+    width: 48px;
+    height: 2px;
+    position: absolute;
+    background: #A7E8E0;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-24px);
+    transition: width 0.2s;
+}
+
+.midSection a::after,
+.mobileMenu li a::after {
+    width: 0px;
+}
+
+.midSection a:hover::after,
+.mobileMenu li a:hover::after {
+    width: 48px;
+}
+.mobileMenu li a.getStartedButton::after{
+    /* Dont underline the get started button */
+    width: 0;
+}
+/** END STYLES FOR DYNAMIC UNDERLINING */
+
+.rightSection {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hamburgerIcon{
+    margin: 24px 16px;
+}
+
+.getStartedButton {
+    background: #FF9B71;
+    border-radius: 2px;
+    color: #151517;
+    padding: 10px 22px; /* to achieve 134px x 38px */
+    margin-left: 36px;
+    margin-right: 23px;
+}
+
+
+.hamburgerIcon {
+    cursor: pointer;
+}
+
+.mobileHeader {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    transition: left 1s;
+    z-index: 1;
+    background: #181818;
+    text-align: center;
+}
+
+.mobileMenu li {
+    margin-top: 30px;
+}

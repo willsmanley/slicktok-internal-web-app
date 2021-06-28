@@ -1,0 +1,22 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    /* Creates transparent circle with 75% of a circular border*/
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+    border: 2px solid grey;
+    border-bottom-color: transparent;
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes spin {
+    /* Spins the circle */
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

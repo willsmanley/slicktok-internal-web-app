@@ -1,0 +1,72 @@
+.externalFooter {
+    background: #182028;
+    width: 100vw;
+    padding-top: 50px;
+    color: white;
+}
+
+.externalFooter > * {
+    width: 1110px;
+    padding: 0 15px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.externalFooter .topRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.externalFooter .bottomRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+    .externalFooter .bottomRow {
+        flex-direction: column-reverse;
+        padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 530px) {
+    .externalFooter .topRow {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.externalFooter .topLeftSide {
+
+}
+
+.externalFooter .address {
+    margin: 30px 0;
+}
+
+.externalFooter .linkColumns > * {
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.externalFooter .linkColumns > *:first-child {
+    margin-right:65px;
+}
+
+.externalFooter .linkColumns li {
+    margin-bottom: 15px;
+}
+
+.freeToolsTitle {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.emailLink {
+    margin-bottom: 25px;
+}
+.freeTools li {
+    margin-bottom: 5px;
+}

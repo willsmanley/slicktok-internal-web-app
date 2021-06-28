@@ -1,0 +1,65 @@
+.form1 {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 25px;
+}
+
+.form1 h1 {
+    text-align: center;
+}
+
+.form1 label {
+    display: block;
+}
+
+/* Exact same as buttonStyles.button */
+.form1 button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #4C4E52;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 5px 16px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #21262d;
+    box-shadow: 0 0 transparent, 0 0 transparent;
+    color: white;
+    transition: .2s cubic-bezier(.3,0,.5,1);
+    transition-property: color,background-color,border-color;
+}
+
+.form1 button:hover {
+    border: 1px solid white;
+    background-color: #333b46;
+}
+
+.form1 button:disabled {
+    color: grey;
+    cursor: not-allowed;
+    border: 1px solid #4C4E52;
+}
+
+.form1 input, .form1 textarea {
+    background: #333333;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    margin-top: 8px;
+}
+
+.form1 h2 {
+    font-size: 28px;
+}

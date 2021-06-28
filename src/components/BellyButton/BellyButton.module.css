@@ -1,0 +1,111 @@
+/*
+BellyButton is composed of a <div> that wraps an empty <span> and optional text.
+The span is the outer circle.
+When hovered, a selector appears (via :after).
+When clicked, a filled circle appears (via :after).
+
+Available variants:
+bellyButton (20x20 outer circle)
+bellyButtonChecked
+bellyButtonSmall (14x14 outer circle)
+bellyButtonFixed (does not re-style, but prevents changes
+bellyButtonDisabled (re-styles to show disabled and prevents changes)
+
+Important to use even numbers for width and height of outer circle because
+the :after element is a percentage and will render ~1px off-balance with uneven numbers.
+
+IMPORTANT: When modifying the span (the circular "button"), it is important to use the direct child notation (">")
+and use the "first-child" pseudo-selector, so that we don't accidentally apply the style to any spans that are passed
+in as props for the "text" part of the belly button.
+*/
+
+.bellyButton{
+
+    /* 20px height + (2 * 1px border) */
+    line-height: 22px;
+
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 auto 0 0;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -0.025em;
+    color: #677476;
+}
+
+.bellyButton > span:first-child{
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    border: 1px solid #D9DCDD;
+    border-radius: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.bellyButton > span:first-child:after{
+    content: '';
+    position: absolute;
+    transform: scale(0) translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    background: #A7E8E0;
+    transition: all .2s ease;
+    opacity: .15;
+    pointer-events: none;
+}
+.bellyButton:hover > span:first-child:after {
+    /* 13.89% is (50% / 360%) (we need to effectively translate (-50%,-50%),
+    but the element is 360% larger than normal, so we need to adjust down for that. */
+    transform: scale(3.6) translate(-13.89%,-13.89%)
+}
+
+
+
+/* CHECKED STATE */
+.bellyButton.bellyButtonChecked > span:first-child {
+    border-color: #A7E8E0;
+}
+.bellyButton.bellyButtonChecked > span:first-child:after{
+    transform: scale(1) translate(-50%, -50%);
+    transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+    opacity: 1;
+}
+
+
+/* SMALL OPTION OVERRIDE */
+.bellyButton.bellyButtonSmall {
+    /* Has to be 14px height + (2 * 1px border) */
+    line-height: 16px;
+}
+.bellyButton.bellyButtonSmall > span:first-child {
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    min-height: 14px;
+}
+
+/* DISABLED OVERRIDE */
+.bellyButton.bellyButtonDisabled{
+    color: #dddddd;
+    cursor: not-allowed;
+}
+.bellyButton.bellyButtonDisabled:hover > span:first-child:after {
+    transform: scale(0);
+}
+
+/* FIXED OVERRIDE */
+.bellyButton.bellyButtonFixed{
+    cursor: default;
+}
+.bellyButton.bellyButtonFixed:hover > span:first-child:after {
+    transform: unset;
+}

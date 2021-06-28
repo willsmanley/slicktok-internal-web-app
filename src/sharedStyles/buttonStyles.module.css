@@ -1,0 +1,55 @@
+/* Inspired by GitHub dark mode buttons */
+
+.button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #4C4E52;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 5px 16px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #21262d;
+    box-shadow: 0 0 transparent, 0 0 transparent;
+    color: white;
+    transition: .2s cubic-bezier(.3,0,.5,1);
+    transition-property: color,background-color,border-color;
+}
+
+.button:hover {
+    border: 1px solid white;
+    background-color: #333b46;
+}
+
+.button:disabled {
+    color: grey;
+    cursor: not-allowed;
+    border: 1px solid #4C4E52;
+}
+
+.largeButton {
+    padding: 10px 30px;
+}
+
+.hollowButton {
+    background: none;
+}
+
+.hollowButton:hover {
+    background: none;
+}
+
+.fullWidthButton {
+    display: block;
+    width: 100%;
+}

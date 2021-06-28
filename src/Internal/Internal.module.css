@@ -1,0 +1,35 @@
+.internal {
+    background: #0E1116;
+    color: #c9d1d9;
+    width: 100vw;
+}
+
+.main {
+    padding: calc(55px + 50px) 20px 90px 34px; /* 55px has to be the same as top nav bar height */
+}
+
+.main h1 {
+    font-weight: 600;
+    font-size: 26px;
+    margin: 0;
+}
+
+.main hr {
+    width: 100%;
+    background: #DCDDDD;
+    height: 1px;
+    border: none;
+    margin: 16px 0 32px;
+}
+
+.internal h1 {
+    color: white;
+}
+
+.internal h2 {
+    color: white;
+}
+
+.internal h3 {
+    color: white;
+}

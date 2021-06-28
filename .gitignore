@@ -1,0 +1,58 @@
+# Node Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Node Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Node Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+
+# Unwanted Mac OS files
+.DS_Store
+__MACOS/
+.__MACOS/
+
+# Distribution file
+Archive.zip
+
+# Local DynamoDB database
+shared-local-instance.db
+
+# Build directory
+dist/
+build/
+
+# Docs
+docs/
+
+# IDEs
+.idea/
+
+#Dynalite
+dynalite/
+
+# Scratch file for testing
+scratch.js
+
+# Jest Coverage
+coverage/
+
+# ESLint Cache
+.eslintcache
+
+# Temp
+temp/
+
+# Lockfiles for testing spreadsheets
+test-files/.~lock*#
